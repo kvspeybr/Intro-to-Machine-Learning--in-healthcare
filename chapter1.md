@@ -48,7 +48,7 @@ from sklearn.metrics import auc
 plt.style.use('ggplot')
 
 #read Wisconsin breast cancer data set
-breast_cancer = pd.read_csv('http://assets.datacamp.com/production/repositories/3810/datasets/0eb6987cb9633e4d6aa6cfd11e00993d2387caa4/data.csv')
+breast_cancer = pd.read_csv('http://assets.datacamp.com/production/repositories/3810/datasets/7c19b7d9c1db98790fcf3efc234807a478e6a53e/data.csv')
 
 # Convert diagnosis to binary : M=1, B=0
 breast_cancer['diagnosis'] = breast_cancer['diagnosis'].map({'M':1, 'B':0})
