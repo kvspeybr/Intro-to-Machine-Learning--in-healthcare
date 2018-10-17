@@ -72,7 +72,9 @@ xp: 50
 What's the correct answer
 
 `@possible_answers`
-[No]
+yes
+no
+sometimes
 
 `@hint`
 I would say 2
