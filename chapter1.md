@@ -63,33 +63,60 @@ breast_cancer['diagnosis'] = breast_cancer['diagnosis'].map({'M':1, 'B':0})
 
 ---
 
-## Histogram plot of diagnosis values
+## Insert exercise title here
 
 ```yaml
-type: MultipleChoiceExercise
-key: dc445f1d5e
-xp: 50
+type: NormalExercise
+key: 78466eec7f
+xp: 100
 ```
 
 
 
-`@possible_answers`
-1. Yes
-2. No
+`@instructions`
+
 
 `@hint`
 
 
 `@pre_exercise_code`
 ```{python}
-y = breast_cancer['diagnosis']
-ax = sns.countplot(y,label="Count")       # M = 212, B = 357
-B, M = y.value_counts()
-print('Number of Benign: ',B)
-print('Number of Malignant : ',M)
+
+```
+
+`@sample_code`
+```{python}
+cols = ['concave_points_worst', 'concavity_mean', 
+        'perimeter_worst', 'radius_worst', 
+        'area_worst', 'diagnosis']
+
+sns.pairplot(breast_cancer,
+             x_vars = cols,
+             y_vars = cols,
+             hue = 'diagnosis', 
+             palette = ('Green','Red'), 
+             markers=["o", "D"]
+             #, plot_kws={'scatter_kws': {'alpha': 0.1}}
+            ) 
+```
+
+`@solution`
+```{python}
+cols = ['concave_points_worst', 'concavity_mean', 
+        'perimeter_worst', 'radius_worst', 
+        'area_worst', 'diagnosis']
+
+sns.pairplot(breast_cancer,
+             x_vars = cols,
+             y_vars = cols,
+             hue = 'diagnosis', 
+             palette = ('Green','Red'), 
+             markers=["o", "D"]
+             #, plot_kws={'scatter_kws': {'alpha': 0.1}}
+            ) 
 ```
 
 `@sct`
 ```{python}
-
+Ex().has_equal_value()
 ```
