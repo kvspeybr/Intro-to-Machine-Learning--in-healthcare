@@ -81,22 +81,7 @@ xp: 100
 
 `@pre_exercise_code`
 ```{python}
-import pandas as pd
-import numpy as np
 import seaborn as sns
-import matplotlib.pyplot as plt
-from sklearn.model_selection import train_test_split 
-from sklearn.model_selection import KFold, cross_val_score 
-from sklearn.ensemble import RandomForestClassifier 
-from sklearn.metrics import roc_curve
-from sklearn.metrics import auc
-plt.style.use('ggplot')
-
-#read Wisconsin breast cancer data set
-breast_cancer = pd.read_csv('http://assets.datacamp.com/production/repositories/3810/datasets/7c19b7d9c1db98790fcf3efc234807a478e6a53e/data.csv')
-
-# Convert diagnosis to binary : M=1, B=0
-breast_cancer['diagnosis'] = breast_cancer['diagnosis'].map({'M':1, 'B':0})
 ```
 
 `@sample_code`
@@ -127,8 +112,7 @@ sns.pairplot(breast_cancer,
              hue = 'diagnosis', 
              palette = ('Green','Red'), 
              markers=["o", "D"]
-             #, plot_kws={'scatter_kws': {'alpha': 0.1}}
-            ) 
+             ) 
 ```
 
 `@sct`
