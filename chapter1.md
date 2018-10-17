@@ -15,7 +15,6 @@ Data has been loaded for you through `pandas.read_csv()` function. The result of
 
 Use the above commands to indicate which answer is **NOT** true
 
-
 `@possible_answers`
 1. Yes
 2. No
