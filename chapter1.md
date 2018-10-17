@@ -72,8 +72,8 @@ xp: 50
 What's the correct answer
 
 `@possible_answers`
-1. Yes
-[2]. No
+Yes
+[No]
 
 `@hint`
 I would say 2
