@@ -97,6 +97,8 @@ breast_cancer = pd.read_csv('http://assets.datacamp.com/production/repositories/
 
 # Convert diagnosis to binary : M=1, B=0
 breast_cancer['diagnosis'] = breast_cancer['diagnosis'].map({'M':1, 'B':0})
+
+%matplotlib inline
 ```
 
 `@sample_code`
