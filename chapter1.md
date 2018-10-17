@@ -14,9 +14,9 @@ xp: 50
 
 
 `@possible_answers`
-Yes
-No
-[Sometimes]
+1. Yes
+2. No
+[3. Sometimes]
 
 `@hint`
 
