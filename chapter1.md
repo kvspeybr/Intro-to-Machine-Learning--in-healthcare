@@ -63,7 +63,7 @@ breast_cancer['diagnosis'] = breast_cancer['diagnosis'].map({'M':1, 'B':0})
 
 ---
 
-## Insert exercise title here
+## Exploratory Data Analysis - Demo
 
 ```yaml
 type: NormalExercise
@@ -71,10 +71,10 @@ key: 78466eec7f
 xp: 100
 ```
 
-
+After loading the data, the Exploratory Data Analysis (EDA) is used to get an understanding of the data and possible indications of relationships. One of the possible tools to visualize different variables is to use a pairplot. in the exercise below you will create such a pairplot for 3 variables in function of the associated diagnosis
 
 `@instructions`
-
+Create a pairplot for 3 variables from the breast_cancer data set: perimeter_worst , concavity_mean and area_se. In the template code below replace the variables (replace_me) in the cols-array by the respective variables that are to be displayed. Use 'diagnosis' as the variable to set the hue.
 
 `@hint`
 
@@ -85,51 +85,40 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
-from sklearn.model_selection import train_test_split 
-from sklearn.model_selection import KFold, cross_val_score 
-from sklearn.ensemble import RandomForestClassifier 
-from sklearn.metrics import roc_curve
-from sklearn.metrics import auc
-plt.style.use('ggplot')
 
 #read Wisconsin breast cancer data set
 breast_cancer = pd.read_csv('http://assets.datacamp.com/production/repositories/3810/datasets/7c19b7d9c1db98790fcf3efc234807a478e6a53e/data.csv')
 
 # Convert diagnosis to binary : M=1, B=0
 breast_cancer['diagnosis'] = breast_cancer['diagnosis'].map({'M':1, 'B':0})
-
-%matplotlib inline
 ```
 
 `@sample_code`
 ```{python}
-cols = ['concave points_worst', 'concavity_mean', 
-        'perimeter_worst', 'radius_worst', 
-        'area_worst']
+cols = ['replace_me', 'replace_me','replace_me']
 
 sns.pairplot(breast_cancer,
              x_vars = cols,
              y_vars = cols,
              hue = 'diagnosis', 
              palette = ('Green','Red'), 
-             markers=["o", "D"]
-             #, plot_kws={'scatter_kws': {'alpha': 0.1}}
-            ) 
+             markers=["o", "D"]) 
+            
+plt.show()
 ```
 
 `@solution`
 ```{python}
-cols = ['concave points_worst', 'concavity_mean', 
-        'perimeter_worst', 'radius_worst', 
-        'area_worst', 'diagnosis']
+cols = ['concave points_worst', 'concavity_mean','perimeter_worst']
 
 sns.pairplot(breast_cancer,
              x_vars = cols,
              y_vars = cols,
              hue = 'diagnosis', 
              palette = ('Green','Red'), 
-             markers=["o", "D"]
-             ) 
+             markers=["o", "D"]) 
+            
+plt.show()
 ```
 
 `@sct`
