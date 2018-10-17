@@ -11,7 +11,7 @@ key: a661985a47
 xp: 50
 ```
 
-`Our` source data is available in a flatfile (csv file). The data has been pre-loaded for you through the `pandas.read_csv()` function into a Python dataframe, named ''breast_cancer''. You can now explore this dataframe by executing the following commands:
+The breast cancer data set is available, pre-loaded for you through the `pandas.read_csv()` function into a Python dataframe, named ''breast_cancer''. You can now explore this dataframe by executing the following commands:
 
 - `breast_cancer.head()`: gives the top 5 rows of the data set
 
