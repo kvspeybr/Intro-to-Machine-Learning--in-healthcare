@@ -81,7 +81,7 @@ xp: 100
 
 `@pre_exercise_code`
 ```{python}
-
+import seaborn as sns
 ```
 
 `@sample_code`
