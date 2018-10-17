@@ -105,7 +105,7 @@ breast_cancer['diagnosis'] = breast_cancer['diagnosis'].map({'M':1, 'B':0})
 ```{python}
 cols = ['concave points_worst', 'concavity_mean', 
         'perimeter_worst', 'radius_worst', 
-        'area_worst', 'diagnosis']
+        'area_worst']
 
 sns.pairplot(breast_cancer,
              x_vars = cols,
