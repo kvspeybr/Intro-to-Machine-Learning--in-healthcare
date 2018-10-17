@@ -1,6 +1,6 @@
 ---
-title: 'Loading and Exploring the Data Set'
-description: 'Loading Wisconsin Breast Cancer Data Set'
+title: 'Loading and Exploring the Data'
+description: 'Loading Wisconsin Breast Cancer Data Set and performing Exploratory Data Analysis'
 ---
 
 ## Review input data
@@ -173,35 +173,14 @@ Ex().has_equal_value()
 ## Insert exercise title here
 
 ```yaml
-type: NormalExercise
-key: 3eafb3c242
+type: TabExercise
+key: 7e111b5373
 xp: 100
 ```
 
-An important step in exploring the data is to check whether there is class-imbalance. Class imbalance occurs when certain categories of outcomes (in our case diagnosis) are over-represented vs other categories. In our case, this can be easily checked as we only have two possible classes: 0 or 1. You will perform a count of the number of occurrences of both classes.
 
-`@instructions`
-In a previous exercise you saw how to obtain the values of a particular column i.e. `dataframe['columnname']`. If the column is numerical, it's straightforward to have the corresponding count per value: `dataframe['columnname'].value_counts()`
-
-`@hint`
-breast_cancer['diagnosis'].value_counts()`
 
 `@pre_exercise_code`
-```{python}
-
-```
-
-`@sample_code`
-```{python}
-__['__'].value_counts()
-```
-
-`@solution`
-```{python}
-
-```
-
-`@sct`
 ```{python}
 
 ```
