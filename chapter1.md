@@ -60,3 +60,36 @@ breast_cancer['diagnosis'] = breast_cancer['diagnosis'].map({'M':1, 'B':0})
 ```{python}
 
 ```
+
+---
+
+## Histogram plot of diagnosis values
+
+```yaml
+type: MultipleChoiceExercise
+key: dc445f1d5e
+xp: 50
+```
+
+
+
+`@possible_answers`
+1. Yes
+2. No
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{python}
+y = breast_cancer['diagnosis']
+ax = sns.countplot(y,label="Count")       # M = 212, B = 357
+B, M = y.value_counts()
+print('Number of Benign: ',B)
+print('Number of Malignant : ',M)
+```
+
+`@sct`
+```{python}
+
+```
