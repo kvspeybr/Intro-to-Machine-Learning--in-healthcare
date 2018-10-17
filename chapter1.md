@@ -17,7 +17,7 @@ The breast cancer data set is available, pre-loaded for you through the `pandas.
 
 - `breast_cancer.describe()` : descriptive statistics of the individual columns
 
-- `breast_cancer.iloc[x,:]`: fulll content of the x-th record.
+- `breast_cancer.iloc[x,:]`: fulll content of the record with index x. Note that the first record has index 0 (so x=0)
 
 - `breast_cancer.columns`: gives the full list of column names
 
