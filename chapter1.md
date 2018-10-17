@@ -72,7 +72,6 @@ xp: 50
 What's the correct answer
 
 `@possible_answers`
-Yes
 [No]
 
 `@hint`
