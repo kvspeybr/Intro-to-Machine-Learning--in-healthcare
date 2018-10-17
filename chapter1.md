@@ -3,7 +3,7 @@ title: 'Loading the Data Set'
 description: 'Loading Wisconsin Breast Cancer Data Set'
 ---
 
-## Insert exercise title here
+## Review input data
 
 ```yaml
 type: MultipleChoiceExercise
@@ -11,6 +11,9 @@ key: a661985a47
 xp: 50
 ```
 
+Data has been loaded for you through `pandas.read_csv()` function. The result of that load is put into a Python dataframe, called breast_cancer. You can now explore that dataframe by executing commands such as `breast_cancer.head(n=x)` to retrieve the first x rows of the data set (replace x by an appropriate number) or `breast_cancer.describe()` to obtain descriptive statistics of the individual columns. `breast_cancer.iloc[x,:]` whereby x is the index will give you all attributes of the x-th record.
+
+Use the above commands to indicate which answer is **NOT** true
 
 
 `@possible_answers`
