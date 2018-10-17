@@ -63,6 +63,48 @@ breast_cancer['diagnosis'] = breast_cancer['diagnosis'].map({'M':1, 'B':0})
 
 ---
 
+## Exploratory Data Analysis - Check for Class Imbalance
+
+```yaml
+type: MultipleChoiceExercise
+key: 4a9f7a78bd
+xp: 50
+```
+
+An important step in exploring the data is to check whether there is class-imbalance. Class imbalance occurs when certain categories of outcomes (in our case diagnosis) are over-represented vs other categories. In case of class-imbalance the weight of classes will need to be corrected.
+
+In the case of the breast cancer data set, there are only two possible classes: 0 or 1. You will perform a count of the number of occurrences of both classes and select the correct answer from the options below
+
+For calculating the number of occurrences per class, remember from the first exercise, that you could obtain all values for a given column by using `dataframe['columnname']`. To have the corresponding count per value for this column we need to extend that command by invoking the `.value_counts()` function. So the resulting command becomes: `breast_cancer['diagnosis'].value_counts()`
+
+`@possible_answers`
+1. There are 212 samples with malignant tumors vs 357 benign - no significant class imbalance
+2. There are 41 malignant tumors vs 357 benign - a significant class imbalance
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{python}
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+#read Wisconsin breast cancer data set
+breast_cancer = pd.read_csv('http://assets.datacamp.com/production/repositories/3810/datasets/7c19b7d9c1db98790fcf3efc234807a478e6a53e/data.csv')
+
+# Convert diagnosis to binary : M=1, B=0
+breast_cancer['diagnosis'] = breast_cancer['diagnosis'].map({'M':1, 'B':0})
+```
+
+`@sct`
+```{python}
+
+```
+
+---
+
 ## Exploratory Data Analysis - Pairplot
 
 ```yaml
@@ -157,46 +199,6 @@ __['__'].value_counts()
 `@solution`
 ```{python}
 
-```
-
-`@sct`
-```{python}
-
-```
-
----
-
-## Insert exercise title here
-
-```yaml
-type: MultipleChoiceExercise
-key: 4a9f7a78bd
-xp: 50
-```
-
-An important step in exploring the data is to check whether there is class-imbalance. Class imbalance occurs when certain categories of outcomes (in our case diagnosis) are over-represented vs other categories. In our case, this can be easily checked as we only have two possible classes: 0 or 1. You will perform a count of the number of occurrences of both classes and select the correct answer below. 
-
-For calculating the number of occurrences per class, remember from the first exercise, that you could obtain all values for a given column by using `dataframe['columnname']`. To have the corresponding count per value for this column we need to extend that command by invoking the `.value_counts()` function. So the resulting command becomes: `breast_cancer['diagnosis'].value_counts()`
-
-`@possible_answers`
-1. There are 357 malignant tumors
-2. There are 212 malignant tumors
-
-`@hint`
-
-
-`@pre_exercise_code`
-```{python}
-import pandas as pd
-import numpy as np
-import seaborn as sns
-import matplotlib.pyplot as plt
-
-#read Wisconsin breast cancer data set
-breast_cancer = pd.read_csv('http://assets.datacamp.com/production/repositories/3810/datasets/7c19b7d9c1db98790fcf3efc234807a478e6a53e/data.csv')
-
-# Convert diagnosis to binary : M=1, B=0
-breast_cancer['diagnosis'] = breast_cancer['diagnosis'].map({'M':1, 'B':0})
 ```
 
 `@sct`
