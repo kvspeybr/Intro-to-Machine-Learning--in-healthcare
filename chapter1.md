@@ -73,7 +73,7 @@ What's the correct answer
 
 `@possible_answers`
 1. Yes
-[2. No]
+[2]. No
 
 `@hint`
 I would say 2
