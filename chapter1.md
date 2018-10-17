@@ -11,7 +11,18 @@ key: a661985a47
 xp: 50
 ```
 
-Our source data is available in a flatfile (csv file). The data has been pre-loaded for you through the `pandas.read_csv()` function into a Python dataframe, named ''breast_cancer''. You can now explore that dataframe by executing commands such as `breast_cancer.head(n=x)` to retrieve the first x rows of the data set (replace x by an appropriate number) or `breast_cancer.describe()` to obtain descriptive statistics of the individual columns. `breast_cancer.iloc[x,:]` whereby x is the index will give you all attributes of the x-th record.
+`Our` source data is available in a flatfile (csv file). The data has been pre-loaded for you through the `pandas.read_csv()` function into a Python dataframe, named ''breast_cancer''. You can now explore this dataframe by executing the following commands:
+
+- `breast_cancer.head()`: gives the top 5 rows of the data set
+
+- `breast_cancer.describe()` : descriptive statistics of the individual columns
+
+- `breast_cancer.iloc[x,:]`: fulll content of the x-th record.
+
+- `breast_cancer.columns`: gives the full list of column names
+
+- `breast_cancer['column_name']`: gives all values for all subjects for the given column name. This syntaxis can be used in combination with the previous functions e.g. `breast_cancer['perimeter_mean'].describe()` gives the descriptive statistics only of this specific column
+
 
 Use the above commands to indicate which answer is **NOT** true
 
