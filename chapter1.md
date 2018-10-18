@@ -167,20 +167,3 @@ plt.show()
 ```{python}
 Ex().has_equal_value()
 ```
-
----
-
-## Insert exercise title here
-
-```yaml
-type: TabExercise
-key: 7e111b5373
-xp: 100
-```
-
-
-
-`@pre_exercise_code`
-```{python}
-
-```
