@@ -43,8 +43,14 @@ Split data in a training and test set. You will do this using the `train_test_sp
 
 `@sample_code`
 ```{python}
+#Split the dataframe into an array 'X' with the input variables and an array 'y' with the outcome variable
 X = bc[['fractal_dimension_mean', 'smoothness_se']].values
 y = bc['diagnosis'].values
+
+#Scale features
+from sklearn.preprocessing import StandardScaler
+sc = StandardScaler()
+X = sc.fit_transform(X)
 
 # Splitting the dataset into the Training set and Test set
 from sklearn.model_selection import train_test_split
