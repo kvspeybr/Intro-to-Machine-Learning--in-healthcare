@@ -95,7 +95,7 @@ import matplotlib.pyplot as plt
 bc = pd.read_csv('http://assets.datacamp.com/production/repositories/3810/datasets/7c19b7d9c1db98790fcf3efc234807a478e6a53e/data.csv')
 
 # Convert diagnosis to binary : M=1, B=0
-bc['diagnosis'] = breast_cancer['diagnosis'].map({'M':1, 'B':0})
+bc['diagnosis'] = bc['diagnosis'].map({'M':1, 'B':0})
 ```
 
 `@sct`
@@ -129,17 +129,17 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 #read Wisconsin breast cancer data set
-breast_cancer = pd.read_csv('http://assets.datacamp.com/production/repositories/3810/datasets/7c19b7d9c1db98790fcf3efc234807a478e6a53e/data.csv')
+bc = pd.read_csv('http://assets.datacamp.com/production/repositories/3810/datasets/7c19b7d9c1db98790fcf3efc234807a478e6a53e/data.csv')
 
 # Convert diagnosis to binary : M=1, B=0
-breast_cancer['diagnosis'] = breast_cancer['diagnosis'].map({'M':1, 'B':0})
+bc['diagnosis'] = bc['diagnosis'].map({'M':1, 'B':0})
 ```
 
 `@sample_code`
 ```{python}
 cols = ['replace_me', 'replace_me','replace_me']
 
-sns.pairplot(breast_cancer,
+sns.pairplot(bc_cancer,
              x_vars = cols,
              y_vars = cols,
              hue = 'diagnosis', 
@@ -153,7 +153,7 @@ plt.show()
 ```{python}
 cols = ['concave points_worst', 'concavity_mean','perimeter_worst']
 
-sns.pairplot(breast_cancer,
+sns.pairplot(bc,
              x_vars = cols,
              y_vars = cols,
              hue = 'diagnosis', 
