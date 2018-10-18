@@ -92,10 +92,10 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 #read Wisconsin breast cancer data set
-breast_cancer = pd.read_csv('http://assets.datacamp.com/production/repositories/3810/datasets/7c19b7d9c1db98790fcf3efc234807a478e6a53e/data.csv')
+bc = pd.read_csv('http://assets.datacamp.com/production/repositories/3810/datasets/7c19b7d9c1db98790fcf3efc234807a478e6a53e/data.csv')
 
 # Convert diagnosis to binary : M=1, B=0
-breast_cancer['diagnosis'] = breast_cancer['diagnosis'].map({'M':1, 'B':0})
+bc['diagnosis'] = breast_cancer['diagnosis'].map({'M':1, 'B':0})
 ```
 
 `@sct`
