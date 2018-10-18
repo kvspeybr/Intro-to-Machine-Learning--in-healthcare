@@ -11,23 +11,23 @@ key: a661985a47
 xp: 50
 ```
 
-The breast cancer data set is available, pre-loaded for you through the `pandas.read_csv()` function into a Python dataframe, named ''breast_cancer''. You can now explore this dataframe by executing the following commands:
+The breast cancer data set is available, pre-loaded for you through the `pandas.read_csv()` function into a Python dataframe, named ''bc''. You can now explore this dataframe by executing the following commands:
 
-- `breast_cancer.head()`: gives the top 5 rows of the data set
+- `bc.head()`: gives the top 5 rows of the data set
 
-- `breast_cancer.describe()` : descriptive statistics of the individual columns
+- `bc.describe()` : descriptive statistics of the individual columns
 
-- `breast_cancer.iloc[x,:]`: fulll content of the record with index x. Note that the first record has index 0 (so x=0)
+- `bc.iloc[x,:]`: fulll content of the record with index x. Note that the first record has index 0 (so x=0)
 
-- `breast_cancer.columns`: gives the full list of column names
+- `bc.columns`: gives the full list of column names
 
-- `breast_cancer['column_name']`: gives all values for all subjects for the given column name. This syntaxis can be used in combination with the previous functions e.g. `breast_cancer['perimeter_mean'].describe()` gives the descriptive statistics only of this specific column
+- `bc['column_name']`: gives all values for all subjects for the given column name. This syntaxis can be used in combination with the previous functions e.g. `bc['perimeter_mean'].describe()` gives the descriptive statistics only of this specific column
 
 
 Use the above commands to indicate which answer is **NOT** true
 
 `@possible_answers`
-1. There are 569 records in the data set "breast_cancer"
+1. There are 569 records in the data set. 
 2. The first three patients in the dataset have a diagnosis of 0 (benign)
 3. The "compactness_mean" value for the first patient (index=0) is equal to 0.277600
 4. The minimum value for "perimeter_mean" is 43.790000
@@ -50,10 +50,10 @@ from sklearn.metrics import auc
 plt.style.use('ggplot')
 
 #read Wisconsin breast cancer data set
-breast_cancer = pd.read_csv('http://assets.datacamp.com/production/repositories/3810/datasets/7c19b7d9c1db98790fcf3efc234807a478e6a53e/data.csv')
+bc = pd.read_csv('http://assets.datacamp.com/production/repositories/3810/datasets/7c19b7d9c1db98790fcf3efc234807a478e6a53e/data.csv')
 
 # Convert diagnosis to binary : M=1, B=0
-breast_cancer['diagnosis'] = breast_cancer['diagnosis'].map({'M':1, 'B':0})
+bc['diagnosis'] = bc['diagnosis'].map({'M':1, 'B':0})
 ```
 
 `@sct`
