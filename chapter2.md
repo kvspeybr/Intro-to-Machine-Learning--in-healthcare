@@ -43,7 +43,7 @@ Split data in a training and test set. You will do this using the `train_test_sp
 
 `@sample_code`
 ```{python}
-X = bc['fractal_dimension_mean', 'smoothness_se'].values
+X = bc[['fractal_dimension_mean', 'smoothness_se']].values
 y = bc['diagnosis'].values
 
 # Splitting the dataset into the Training set and Test set
@@ -53,7 +53,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = __, random
 
 `@solution`
 ```{python}
-X = bc['fractal_dimension_mean', 'smoothness_se'].values
+X = bc[['fractal_dimension_mean', 'smoothness_se']].values
 y = bc['diagnosis'].values
 
 # Splitting the dataset into the Training set and Test set
