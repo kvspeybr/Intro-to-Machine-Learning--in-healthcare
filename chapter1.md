@@ -137,9 +137,9 @@ bc['diagnosis'] = bc['diagnosis'].map({'M':1, 'B':0})
 
 `@sample_code`
 ```{python}
-cols = ['replace_me', 'replace_me','replace_me']
+cols = [__, __, __]
 
-sns.pairplot(bc_cancer,
+sns.pairplot(bc,
              x_vars = cols,
              y_vars = cols,
              hue = 'diagnosis', 
