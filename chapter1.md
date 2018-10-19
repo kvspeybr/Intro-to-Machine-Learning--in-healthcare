@@ -194,11 +194,8 @@ and in a second step, execute the following command:
 
 `@possible_answers`
 - Answer 1
-
 - Answer 2
-
 - Answer 3
-
 - Answer 4
 
 `@hint`
