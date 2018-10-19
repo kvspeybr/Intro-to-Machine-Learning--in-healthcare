@@ -170,7 +170,7 @@ Ex().has_equal_value()
 
 ---
 
-## Insert exercise title here
+## Identifying highly correlated features
 
 ```yaml
 type: MultipleChoiceExercise
@@ -186,7 +186,7 @@ The syntaxis for showing the correlation matrix as a heatmap is as follows:
 
 and in a second step, execute the following command:
 
-`plt.show()`
+`plt.xticks(rotation=90);plt.yticks(rotation=0);plt.show()`
 
 `@possible_answers`
 
