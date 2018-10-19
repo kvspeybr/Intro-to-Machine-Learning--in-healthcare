@@ -36,15 +36,12 @@ xp: 100
 ```
 
 `@instructions`
+In a first step the data will be normalized.
+
 Split data in a training and test set. You will do this using the `train_test_split` method from the `sklearn.model_selection` library. Typically, the ratio training vs test data is in the range of 0.7 to 0.8. In this specific exercise, use a ratio of 0.25 for the fraction of test data.
 
 `@hint`
-`X = bc[['fractal_dimension_mean', 'smoothness_se']].values
-y = bc['diagnosis'].values
 
-# Splitting the dataset into the Training set and Test set
-from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, random_state = 0)`
 
 `@sample_code`
 ```{python}

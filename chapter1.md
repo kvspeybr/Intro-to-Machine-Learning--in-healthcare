@@ -167,3 +167,47 @@ plt.show()
 ```{python}
 Ex().has_equal_value()
 ```
+
+---
+
+## Insert exercise title here
+
+```yaml
+type: MultipleChoiceExercise
+key: 85c85a4f15
+xp: 50
+```
+
+Prior to building the model, highly correlated features need to be removed as they are redundant. In this step we'll visualize the correlations between all features. Assume that we've set the cutoff for highly correlated features at 0.9 or above (Pearson correlation coefficient). 
+
+The syntaxis for showing the correlation matrix as a heatmap is as follows:
+
+`sns.heatmap(bc.corr(), annot=True, linewidths=.5, fmt= '.1f',ax=ax)`
+
+
+`@possible_answers`
+
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{python}
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+#read Wisconsin breast cancer data set
+bc = pd.read_csv('http://assets.datacamp.com/production/repositories/3810/datasets/7c19b7d9c1db98790fcf3efc234807a478e6a53e/data.csv')
+
+# Convert diagnosis to binary : M=1, B=0
+bc['diagnosis'] = bc['diagnosis'].map({'M':1, 'B':0})
+
+f,ax = plt.subplots(figsize=(20, 20))
+```
+
+`@sct`
+```{python}
+
+```
