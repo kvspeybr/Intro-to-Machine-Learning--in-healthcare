@@ -13,9 +13,7 @@ xp: 100
 
 In this step, you will perform an evaluation of the model by calculating accuracy and showing the confusion matrix. Accuracy is only one metric that can be used to evaluate a model and it's the ratio of correctly classified 
 
-The confusion matrix is a grid with the actual outcomes on the X-axis and the predicted outcomes on the Y-axis. 
-
-
+The confusion matrix is a grid with the actual outcomes on the X-axis and the predicted outcomes on the Y-axis.
 
 `@instructions`
 - To calculate accuracy (accuracy = number of correct predictions / total number of predictions):
