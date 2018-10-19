@@ -81,7 +81,7 @@ key: 5c790eff84
 ```
 
 `@instructions`
-In this step, you will actually run a Random Forest Classifier algorithm. After instantiating the RandomForestClassifier class, run the `.fit(X,y)` method. You should use the training subset to perform this `.fit(X,y)` method. The first parameter in the fit method will be the feature training set (`X-train`), the second parameter is the outcome variable i.e. `y_train`
+In this step, you will actually run a Random Forest Classifier algorithm. After instantiating the RandomForestClassifier class, run the `.fit(X,y)` method. You should use the training subset to perform this `.fit(X,y)` method. The first parameter in the fit method will be the feature training set (`X-train`), the second parameter needs to be the outcome variable i.e. `y_train`. In a last step, you will use the classifier to predict the values of the test subset.
 
 `@hint`
 
@@ -103,6 +103,46 @@ classifier = RandomForestClassifier(random_state=43)
 #perform the fit, using the training subset
 classifier = classifier.fit(X_train,y_train)
 ```
+
+`@sct`
+```{python}
+
+```
+
+***
+
+```yaml
+type: MultipleChoiceExercise
+key: 06accfd534
+```
+
+`@question`
+In this step, you will perform an evaluation of the model by calculating accuracy and showing the confusion matrix. Accuracy is only one metric that can be used to evaluate a model and it's the ratio of correctly classified 
+
+The confusion matrix is a grid with the actual outcomes on the X-axis and the predicted outcomes on the Y-axis. 
+
+- Run the following command to calculate accuracy (accuracy = number of correct predictions / total number of predictions)
+
+`ac = accuracy_score(parm1,parm2)` whereby parm1 will be the array of actual outcome values i.e. y_test and parm2 will be the predicted outcomes (y_predict)
+
+- To calculate the confusion matrix
+
+`cm=confusion_matrix(parm1,parm2)` whereby parm1 will be the array of actual outcome values i.e. y_test and parm2 will be the predicted outcomes (y_predict)
+
+- To visualize the confusion matrix:
+
+`sns.heatmap(cm,annot=True,fmt="d")`
+
+Use this visualization to select the correct answer(s) from the questions below.
+
+`@possible_answers`
+1. Accuracy is a good metric for model performance for balanced as well as unbalanced datasets
+2. Accuracy for this model is 0.91
+3. If we were to invert the definition of true / false for our outcomes i.e. true=benign and false=malignant we would get a higher accuracy with the same model
+4. Comparing accuracy on the training set vs accuracy on the test set can be indicative of overfitting
+
+`@hint`
+
 
 `@sct`
 ```{python}
