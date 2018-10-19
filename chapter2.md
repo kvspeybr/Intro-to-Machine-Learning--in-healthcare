@@ -42,7 +42,7 @@ y = bc['diagnosis'].values
 X = sc.fit_transform(X)
 
 # Splitting the dataset into the Training set and Test set
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = __, random_state = 0)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, random_state = 0)
 
 #instantiation, random_state is set to a constant so that we obtain the same result when re-executing
 classifier = RandomForestClassifier(random_state=43)
