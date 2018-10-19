@@ -90,7 +90,7 @@ key: 5c790eff84
 ```
 
 `@instructions`
-In this step, you will actually run a Random Forest Classifier algorithm. After instantiating the RandomForestClassifier class, run the `.fit(X,y)` method. You should use the training subset to perform this `.fit(X,y)` method. The first parameter in the fit method will be the feature training set (`X-train`), the second parameter needs to be the outcome variable i.e. `y_train`. In a last step, you will use the classifier to predict the values of the test subset.
+In this step, you will actually run a Random Forest Classifier algorithm. After instantiating the RandomForestClassifier class, run the `.fit(X,y)` method. You should use the training subset to perform this `.fit(X,y)` method. The first parameter in the fit method will be the feature training set (`X_train`), the second parameter needs to be the outcome variable i.e. `y_train`. In a last step, you will use the classifier to predict the values of the test subset.
 
 `@hint`
 
