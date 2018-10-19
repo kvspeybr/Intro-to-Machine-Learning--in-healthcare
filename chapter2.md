@@ -1,5 +1,5 @@
 ---
-title: 'Applying the ML Model'
+title: 'Bulding the ML Model'
 description: 'Define and run the ML model'
 ---
 

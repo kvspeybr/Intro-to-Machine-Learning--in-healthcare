@@ -113,6 +113,77 @@ plt.show()
 
 ---
 
+## Accuracy and Confusion Matrix - Contd
+
+```yaml
+type: MultipleChoiceExercise
+key: deedb66802
+xp: 50
+```
+
+Using the commands from the previous exercise, try to use those to select the correct statement below (there is only 1 statement true)
+
+`@possible_answers`
+- Accuracy is a good metric for evaluating a ML model for balanced and imbalanced datasets
+- The accuracy would be higher if you set Benign tumors to 'True' and Malignant tumors to 'False' than in the opposite case
+- Accuracy on the test set is higher than on the training set
+- The number of False Positives is higher than the number of False Negatives
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{python}
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import f1_score,confusion_matrix
+from sklearn.metrics import accuracy_score
+from sklearn.metrics import roc_curve # ROC Curves
+from sklearn.metrics import roc_auc_score # Calculating AUC for ROC's!
+
+#read Wisconsin breast cancer data set
+bc = pd.read_csv('http://assets.datacamp.com/production/repositories/3810/datasets/7c19b7d9c1db98790fcf3efc234807a478e6a53e/data.csv')
+
+# Convert diagnosis to binary : M=1, B=0
+bc['diagnosis'] = bc['diagnosis'].map({'M':1, 'B':0})
+
+# Instantiate StandardScaler
+sc = StandardScaler()
+
+#Split the dataframe into an array 'X' with the input variables and an array 'y' with the outcome variable
+X = bc[['fractal_dimension_mean', 'smoothness_se']].values
+y = bc['diagnosis'].values
+
+#Scale features
+X = sc.fit_transform(X)
+
+# Splitting the dataset into the Training set and Test set
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, random_state = 0)
+
+#instantiation, random_state is set to a constant so that we obtain the same result when re-executing
+classifier = RandomForestClassifier(random_state=43)
+
+#perform the fit, using the training subset
+classifier = classifier.fit(X_train,y_train)
+
+```
+
+`@sct`
+```{python}
+msg1 = "Incorrect. Accuracy is not a good metric for unbalanced datasets"
+msg2 = "Incorrect."
+msg3 = "Incorrect. As the total number of correct predictions still would be the same, there would be no difference."
+msg4 = "Correct!"
+Ex().has_chosen(1, [msg4])
+```
+
+---
+
 ## Calculating Area Under the Curve
 
 ```yaml
@@ -175,37 +246,6 @@ plt.ylabel('True Positive Rate')
 plt.title('Receiver operating curve')
 plt.legend(loc="lower right")
 plt.show()
-```
-
-`@sct`
-```{python}
-
-```
-
----
-
-## Insert exercise title here
-
-```yaml
-type: MultipleChoiceExercise
-key: deedb66802
-xp: 50
-```
-
-Using the commands from the previous exercise, try to use those to select the correct statement below (there is only 1 statement true)
-
-`@possible_answers`
-- Accuracy is a good metric for evaluating a ML model for balanced and imbalanced datasets
-- The accuracy would be higher if you set Benign tumors to 'True' and Malignant tumors to 'False' than in the opposite case
-- Accuracy on the test set is higher than on the training set
-- The number of False Positives is higher than the number of False Negatives
-
-`@hint`
-
-
-`@pre_exercise_code`
-```{python}
-
 ```
 
 `@sct`
