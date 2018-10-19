@@ -28,11 +28,11 @@ from sklearn.metrics import roc_auc_score # Calculating AUC for ROC's!
 `@sample_code`
 ```{python}
 #ROC curve analysis
-y_pred_proba = classifier.predict_proba(X=X_test)
-scores=y_pred_proba[:,1]
+#y_pred_proba = classifier.predict_proba(X=X_test)
+#scores=y_pred_proba[:,1]
 
-fpr, tpr, thresholds = roc_curve(y_test, scores)
-roc_auc = roc_auc_score(y_test, scores)
+fpr, tpr, thresholds = roc_curve(y_test, y_predict)
+roc_auc = roc_auc_score(y_test, y_predict)
 plt.figure()
 lw = 2
 plt.plot(fpr, tpr, color='darkorange',lw=lw, label='ROC curve (area = %0.2f)' % roc_auc)
