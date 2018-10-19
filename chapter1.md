@@ -192,20 +192,16 @@ and in a second step, execute the following command:
 
 `plt.xticks(rotation=90);plt.yticks(rotation=0);plt.show()`
 
+Indicate the statement below that is **NOT** true
+
 `@possible_answers`
-- Answer 1
-- Answer 2
-- Answer 3
-- Answer 4
+- There is no significant correlation between `texture_mean` and any other variable
+- Radius_mean , perimeter_mean and area_mean can be replaced by one variable
+- `fractal_dimension_mean` and `texture_mean` have a significant (negative) correlation
+- If you are removing highly correlated features, only 5 variables would be withheld
 
 `@hint`
-- Answer 1
 
-- Answer 2
-
-- Answer 3
-
-- Answer 4
 
 `@pre_exercise_code`
 ```{python}
@@ -228,9 +224,9 @@ f,ax = plt.subplots(figsize=(20, 20))
 
 `@sct`
 ```{python}
-msg1 = "Incorrect. Accuracy is not a good metric for unbalanced datasets"
-msg2 = "Incorrect."
-msg3 = "Incorrect. As the total number of correct predictions still would be the same, there would be no difference."
-msg4 = "Correct!"
-Ex().has_chosen(4,[msg1, msg2, msg3, msg4])
+msg1 = "This is a correct statement"
+msg2 = "This is a correct statement."
+msg3 = "This is indeed incorrect. The correlation coefficient is -0.1, so not significant"
+msg4 = "This is a correct statement"
+Ex().has_chosen(3,[msg1, msg2, msg3, msg4])
 ```
