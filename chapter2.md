@@ -122,7 +122,11 @@ y_predict= classifier.predict(X_test)
 
 `@sct`
 ```{python}
-
+Ex().check_correct(check_function('classifier.fit').multi(
+    check_args(0).has_equal_value(),
+    check_args(1).has_equal_value()),
+                   (check_function('classifier.predict').check_args(0).has_equal_value())
+success_msg("Congrats!")
 ```
 
 ***
