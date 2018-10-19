@@ -3,7 +3,7 @@ title: 'Applying the ML Model'
 description: 'Define and run the ML model'
 ---
 
-## Machine Learning
+## Building the Model
 
 ```yaml
 type: TabExercise
