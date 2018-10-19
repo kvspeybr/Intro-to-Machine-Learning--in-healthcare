@@ -76,7 +76,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, rand
 `@sct`
 ```{python}
 Ex().has_no_error()
-Ex().check_function('train_test_split').multi(
+Ex().check_function('sklearn.model_selection.train_test_split').multi(
     check_args(['arrays', 0]).has_equal_value(),
     check_args(['arrays', 0]).has_equal_value(),
     check_args(['options', 'test_size']).has_equal_value(),
