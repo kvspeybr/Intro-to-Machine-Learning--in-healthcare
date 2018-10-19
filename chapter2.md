@@ -111,6 +111,10 @@ classifier = RandomForestClassifier(random_state=43)
 
 #perform the fit, using the training subset
 classifier = classifier.fit(X_train,y_train)
+
+#apply the classifier against the testset
+y_predict= classifier.predict(X_test))
+
 ```
 
 `@sct`
@@ -132,11 +136,11 @@ The confusion matrix is a grid with the actual outcomes on the X-axis and the pr
 
 - Run the following command to calculate accuracy (accuracy = number of correct predictions / total number of predictions)
 
-`ac = accuracy_score(parm1,parm2)` whereby parm1 will be the array of actual outcome values i.e. y_test and parm2 will be the predicted outcomes (y_predict)
+`ac = accuracy_score(parm1,parm2)` whereby parm1 will be the array of actual outcome values (y_test) and parm2 will be the predicted outcomes (y_predict)
 
 - To calculate the confusion matrix
 
-`cm=confusion_matrix(parm1,parm2)` whereby parm1 will be the array of actual outcome values i.e. y_test and parm2 will be the predicted outcomes (y_predict)
+`cm=confusion_matrix(parm1,parm2)` whereby parm1 will be the array of actual outcome values (y_test) and parm2 will be the predicted outcomes (y_predict)
 
 - To visualize the confusion matrix:
 
