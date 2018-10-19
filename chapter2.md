@@ -11,7 +11,7 @@ key: 318e9a3c2f
 xp: 100
 ```
 
-Prior to executing a machine learning model, a data normalisation step is normally included. This will scale all variables so that the absolute value of a variable, does not influence the model build. Secondly, data is split between a training set and a test set. The training set is used to calculate the model parameters against, while the test set is used to validate the calculated model
+Prior to executing a machine learning model, a data normalisation step is executed. This will scale all variables so that the absolute value of a variable, does not influence the model build. Secondly, data is split between a training set and a test set. The training set is used to calculate the model parameters against, while the test set is used to validate the calculated model
 
 `@pre_exercise_code`
 ```{python}
