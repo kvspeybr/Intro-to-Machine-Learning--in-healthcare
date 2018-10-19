@@ -19,6 +19,8 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
+from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import train_test_split
 
 #read Wisconsin breast cancer data set
 bc = pd.read_csv('http://assets.datacamp.com/production/repositories/3810/datasets/7c19b7d9c1db98790fcf3efc234807a478e6a53e/data.csv')
@@ -50,12 +52,9 @@ X = bc[['fractal_dimension_mean', 'smoothness_se']].values
 y = bc['diagnosis'].values
 
 #Scale features
-from sklearn.preprocessing import StandardScaler
-sc = StandardScaler()
-X = sc.fit_transform(X)
+X = sc.fit_transform(StandardScaler())
 
 # Splitting the dataset into the Training set and Test set
-from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = __, random_state = 0)
 ```
 
