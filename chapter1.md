@@ -27,11 +27,11 @@ The breast cancer data set is available, pre-loaded for you through the `pandas.
 Use the above commands to indicate which answer is **NOT** true
 
 `@possible_answers`
-1. There are 569 records in the data set. 
-2. The first three patients in the dataset have a diagnosis of 0 (benign)
-3. The "compactness_mean" value for the first patient (index=0) is equal to 0.277600
-4. The minimum value for "perimeter_mean" is 43.790000
-5. The last column (variable) in the data set is "fractal_dimension_worst"
+- There are 569 records in the data set. 
+- The first three patients in the dataset have a diagnosis of 0 (benign)
+- The "compactness_mean" value for the first patient (index=0) is equal to 0.277600
+- The minimum value for "perimeter_mean" is 43.790000
+- The last column (variable) in the data set is "fractal_dimension_worst"
 
 `@hint`
 
