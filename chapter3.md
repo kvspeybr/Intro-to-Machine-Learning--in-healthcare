@@ -81,10 +81,11 @@ classifier = classifier.fit(X_train,y_train)
 y_predict= classifier.predict(X_test)
 
 #complete command to calculate accuracy on testset
-ac=__
+ac=accuracy_score(__,__)
+print("accuracy score: ",ac)
 
 #complete command to calculate confusion matrix on training set
-cm=__
+cm=confusion_matrix(__,__)
 
 sns.heatmap(cm,annot=True,fmt="d")
 plt.show()
