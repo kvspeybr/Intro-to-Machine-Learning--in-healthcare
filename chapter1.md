@@ -61,8 +61,9 @@ bc['diagnosis'] = bc['diagnosis'].map({'M':1, 'B':0})
 msg1 = "Wrong. Using the bc.describe() command you'll see there are 569 rows"
 msg2 = "Correct. The first three patients have a diagnosis of 1"
 msg3 = "Incorrect. Try using bc['compactness_mean']"
-msg4 = "Incorrect. Try with bc.columns'
-Ex().has_chosen(2,[msg1, msg2, msg3, msg4])
+msg4 = "Incorrect. Try with bc[perimeter_mean]"
+msg5 = "Incorrect. Trry with bc.columns"
+Ex().has_chosen(2,[msg1, msg2, msg3, msg4, msg5])
 ```
 
 ---
