@@ -184,7 +184,6 @@ The syntaxis for showing the correlation matrix as a heatmap is as follows:
 
 `sns.heatmap(bc.corr(), annot=True, linewidths=.5, fmt= '.1f',ax=ax)`
 
-
 `@possible_answers`
 
 
