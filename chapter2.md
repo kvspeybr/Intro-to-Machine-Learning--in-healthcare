@@ -72,3 +72,39 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, rand
 ```{python}
 Ex().has_equal_value()
 ```
+
+***
+
+```yaml
+type: NormalExercise
+key: 5c790eff84
+```
+
+`@instructions`
+In this step, you will actually run a Random Forest Classifier algorithm. After instantiating the RandomForestClassifier class, run the `.fit(X,y)` method. You should use the training subset to perform this `.fit(X,y)` method. The first parameter in the fit method will be the feature training set (`X-train`), the second parameter is the outcome variable i.e. `y_train`
+
+`@hint`
+
+
+`@sample_code`
+```{python}
+#instantiation, random_state is set to a constant so that we obtain the same result when re-executing
+classifier = RandomForestClassifier(random_state=43)
+
+#perform the fit, using the training subset
+classifier = classifier.fit(__,__)
+```
+
+`@solution`
+```{python}
+#instantiation, random_state is set to a constant so that we obtain the same result when re-executing
+classifier = RandomForestClassifier(random_state=43)
+
+#perform the fit, using the training subset
+classifier = classifier.fit(X_train,y_train)
+```
+
+`@sct`
+```{python}
+
+```
