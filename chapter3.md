@@ -11,10 +11,27 @@ key: f7302f2790
 xp: 100
 ```
 
+In this step, you will perform an evaluation of the model by calculating accuracy and showing the confusion matrix. Accuracy is only one metric that can be used to evaluate a model and it's the ratio of correctly classified 
+
+The confusion matrix is a grid with the actual outcomes on the X-axis and the predicted outcomes on the Y-axis. 
+
 
 
 `@instructions`
+- To calculate accuracy (accuracy = number of correct predictions / total number of predictions):
 
+`ac = accuracy_score(parm1,parm2)` whereby parm1 will be the array of actual outcome values (y_test) and parm2 will be the predicted outcomes (y_predict)
+
+- To calculate the confusion matrix:
+
+`cm=confusion_matrix(parm1,parm2)` whereby parm1 will be the array of actual outcome values (y_test) and parm2 will be the predicted outcomes (y_predict)
+
+- To visualize the confusion matrix:
+
+`sns.heatmap(cm,annot=True,fmt="d")`
+`plt.show()`
+
+Use this visualization to select the correct answer(s) from the questions below.
 
 `@hint`
 
@@ -65,12 +82,29 @@ classifier = classifier.fit(X_train,y_train)
 #apply the classifier against the testset
 y_predict= classifier.predict(X_test)
 
+#complete command to calculate accuracy on testset
+ac=__
 
+#complete command to calculate confusion matrix on training set
+cm=__
+
+sns.heatmap(cm,annot=True,fmt="d")
+plt.show()
 ```
 
 `@solution`
 ```{python}
+#apply the classifier against the testset
+y_predict= classifier.predict(X_test)
 
+#complete command to calculate accuracy on testset
+ac=accuracy_score(y_test,y_predict)
+
+#complete command to calculate confusion matrix on training set
+cm=confusion_matrix(y_test,y_predict)
+
+sns.heatmap(cm,annot=True,fmt="d")
+plt.show()
 ```
 
 `@sct`
