@@ -118,7 +118,6 @@ classifier = classifier.fit(X_train,y_train)
 
 #apply the classifier against the testset
 y_predict= classifier.predict(X_test)
-
 ```
 
 `@sct`
