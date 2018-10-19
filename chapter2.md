@@ -189,7 +189,11 @@ Use this visualization to select the correct answer(s) from the questions below.
 
 `@sct`
 ```{python}
-
+msg1 = "Incorrect. Accuracy is not a good metric for unbalanced datasets"
+msg2 = "Incorrect."
+msg3 = "Incorrect. As the total number of correct predictions still would be the same, there would be no difference."
+msg4 = "Correct! Python is an extremely versatile language."
+Ex().has_chosen(1, [msg4])
 ```
 
 ***
