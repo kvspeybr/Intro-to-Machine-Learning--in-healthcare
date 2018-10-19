@@ -22,6 +22,8 @@ import matplotlib.pyplot as plt
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import f1_score,confusion_matrix
+from sklearn.metrics import accuracy_score
 from sklearn.metrics import roc_curve # ROC Curves
 from sklearn.metrics import roc_auc_score # Calculating AUC for ROC's!
 
@@ -52,6 +54,8 @@ classifier = classifier.fit(X_train,y_train)
 
 #apply the classifier against the testset
 y_predict= classifier.predict(X_test)
+
+
 ```
 
 ***
