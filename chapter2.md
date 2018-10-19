@@ -253,5 +253,5 @@ plt.show()
 
 `@sct`
 ```{python}
-
+Ex().has_no_error()
 ```
