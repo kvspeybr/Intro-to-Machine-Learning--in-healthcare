@@ -146,7 +146,7 @@ classifier = classifier.fit(X_train,y_train)
 y_predict= classifier.predict(X_test)
 
 #print the first 10 predicted scores
-print(y_predict.head(n=10))
+print(__)
 ```
 
 `@sct`
