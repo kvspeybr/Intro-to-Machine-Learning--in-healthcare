@@ -102,6 +102,9 @@ classifier = RandomForestClassifier(random_state=43)
 
 #perform the fit, using the training subset
 classifier = classifier.fit(__,__)
+
+#apply the classifier against the testset
+y_predict= classifier.predict(__))
 ```
 
 `@solution`
