@@ -193,10 +193,22 @@ and in a second step, execute the following command:
 `plt.xticks(rotation=90);plt.yticks(rotation=0);plt.show()`
 
 `@possible_answers`
+- Answer 1
 
+- Answer 2
+
+- Answer 3
+
+- Answer 4
 
 `@hint`
+- Answer 1
 
+- Answer 2
+
+- Answer 3
+
+- Answer 4
 
 `@pre_exercise_code`
 ```{python}
@@ -219,5 +231,9 @@ f,ax = plt.subplots(figsize=(20, 20))
 
 `@sct`
 ```{python}
-
+msg1 = "Incorrect. Accuracy is not a good metric for unbalanced datasets"
+msg2 = "Incorrect."
+msg3 = "Incorrect. As the total number of correct predictions still would be the same, there would be no difference."
+msg4 = "Correct!"
+Ex().has_chosen(4,[msg1, msg2, msg3, msg4])
 ```
