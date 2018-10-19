@@ -137,9 +137,9 @@ Use this visualization to select the correct answer(s) from the questions below.
 
 `@possible_answers`
 1. Accuracy is a good metric for model performance for balanced as well as unbalanced datasets
-2. Accuracy for this model on test set is 0.91 while it's 0.98 on the training set
+2. Accuracy for this model on test set is 0.91 while it's 0.98 on the **training** set
 3. If we were to invert the definition of true / false for our outcomes i.e. true=benign and false=malignant we would get a higher accuracy with the same model
-4. Comparing accuracy on the training set vs accuracy on the test set can be indicative of overfitting
+4. There are as many false negatives as false positives in the **test** set
 
 `@hint`
 
