@@ -27,6 +27,9 @@ bc = pd.read_csv('http://assets.datacamp.com/production/repositories/3810/datase
 
 # Convert diagnosis to binary : M=1, B=0
 bc['diagnosis'] = bc['diagnosis'].map({'M':1, 'B':0})
+
+# Instantiate StandardScaler
+sc = StandardScaler()
 ```
 
 ***
