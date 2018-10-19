@@ -129,6 +129,9 @@ classifier = classifier.fit(__,__)
 
 #apply the classifier against the testset
 y_predict= classifier.predict(__)
+
+#print the first 10 predicted scores
+print(y_predict.head(n=10))
 ```
 
 `@solution`
@@ -141,6 +144,9 @@ classifier = classifier.fit(X_train,y_train)
 
 #apply the classifier against the testset
 y_predict= classifier.predict(X_test)
+
+#print the first 10 predicted scores
+print(y_predict.head(n=10))
 ```
 
 `@sct`
