@@ -105,7 +105,7 @@ classifier = RandomForestClassifier(random_state=43)
 classifier = classifier.fit(__,__)
 
 #apply the classifier against the testset
-y_predict= classifier.predict(__))
+y_predict= classifier.predict(__)
 ```
 
 `@solution`
@@ -117,7 +117,7 @@ classifier = RandomForestClassifier(random_state=43)
 classifier = classifier.fit(X_train,y_train)
 
 #apply the classifier against the testset
-y_predict= classifier.predict(X_test))
+y_predict= classifier.predict(X_test)
 
 ```
 
