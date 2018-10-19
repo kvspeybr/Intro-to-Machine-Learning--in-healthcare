@@ -178,11 +178,15 @@ key: 85c85a4f15
 xp: 50
 ```
 
-Prior to building the model, highly correlated features need to be removed as they are redundant. In this step we'll visualize the correlations between all features. Assume that we've set the cutoff for highly correlated features at 0.9 or above (Pearson correlation coefficient). 
+Prior to building the model, highly correlated features need to be removed as they are redundant. In this step we'll visualize the correlations between all features. Assume that we've set the cutoff for highly correlated features at 0.9 or above (Pearson correlation coefficient). To keep everything visible, the correlation heatmap has been reduced to 13  features. 
 
 The syntaxis for showing the correlation matrix as a heatmap is as follows:
 
-`sns.heatmap(bc.corr(), annot=True, linewidths=.5, fmt= '.1f',ax=ax)`
+`sns.heatmap(bc_red.corr(), annot=True, linewidths=.5, fmt= '.1f',ax=ax)`
+
+and in a second step, execute the following command:
+
+`plt.show()`
 
 `@possible_answers`
 
@@ -202,6 +206,11 @@ bc = pd.read_csv('http://assets.datacamp.com/production/repositories/3810/datase
 
 # Convert diagnosis to binary : M=1, B=0
 bc['diagnosis'] = bc['diagnosis'].map({'M':1, 'B':0})
+
+bc_red=['smoothness_mean', 'compactness_mean', 'concavity_mean',
+       'concave_points_mean', 'symmetry_mean', 'fractal_dimension_mean',
+       'radius_se', 'texture_se', 'perimeter_se', 'area_se', 'smoothness_se',
+       'compactness_se', 'concavity_se']
 
 f,ax = plt.subplots(figsize=(20, 20))
 ```
