@@ -220,7 +220,7 @@ bc = pd.read_csv('http://assets.datacamp.com/production/repositories/3810/datase
 # Convert diagnosis to binary : M=1, B=0
 bc['diagnosis'] = bc['diagnosis'].map({'M':1, 'B':0})
 
-bc_red=bc[['smoothness_mean', 'compactness_mean', 'concavity_mean','concave points_mean', 'symmetry_mean', 'fractal_dimension_mean','radius_se', 'texture_se', 'perimeter_se', 'area_se', 'smoothness_se','compactness_se', 'concavity_se']]
+bc_red=bc[['radius_mean', 'texture_mean', 'perimeter_mean','area_mean', 'smoothness_mean', 'compactness_mean', 'concavity_mean','concave points_mean', 'symmetry_mean', 'fractal_dimension_mean']]
 
 
 f,ax = plt.subplots(figsize=(20, 20))
