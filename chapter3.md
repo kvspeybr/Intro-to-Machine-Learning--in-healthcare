@@ -3,7 +3,7 @@ title: 'Evaluating the Model'
 description: 'Evaluation Metrics'
 ---
 
-## Insert exercise title here
+## Calculating Area Under the Curve
 
 ```yaml
 type: NormalExercise
@@ -11,10 +11,10 @@ key: 9cfed5239c
 xp: 100
 ```
 
-You will evaluate the Area Under the Curve (AUC) as part of this exercise. AUC is the area under the Responder Operator Curve (ROC). 
+Besides accuracy and the confusion matrix, there are other metrics and evaluations methods possible for the evaluation of the model. In this exercise, you will use the Area Under the Curve (AUC).
 
 `@instructions`
-Just execute the code. Your experience points are for grabs !
+Just press the 'submit answer' button. The points are yours to keep !
 
 `@hint`
 
