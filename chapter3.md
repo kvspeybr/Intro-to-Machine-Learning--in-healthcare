@@ -245,11 +245,11 @@ y_predict= classifier.predict(X_test)
 `@sample_code`
 ```{python}
 #ROC curve analysis
-#y_pred_proba = classifier.predict_proba(X=X_test)
-#scores=y_pred_proba[:,1]
+y_predict_a = classifier.predict_proba(X=X_test)
+scores=y_predict_a[:,1]
 
-fpr, tpr, thresholds = roc_curve(y_test, y_predict)
-roc_auc = roc_auc_score(y_test, y_predict)
+fpr, tpr, thresholds = roc_curve(y_test, scores)
+roc_auc = roc_auc_score(y_test, scores)
 plt.figure()
 lw = 2
 plt.plot(fpr, tpr, color='darkorange',lw=lw, label='ROC curve (area = %0.2f)' % roc_auc)
@@ -266,8 +266,8 @@ plt.show()
 `@solution`
 ```{python}
 #ROC curve analysis
-y_pred_proba = classifier.predict_proba(X=X_test)
-scores=y_pred_proba[:,1]
+y_predict_a = classifier.predict_proba(X=X_test)
+scores=y_predict_a[:,1]
 
 fpr, tpr, thresholds = roc_curve(y_test, scores)
 roc_auc = roc_auc_score(y_test, scores)
