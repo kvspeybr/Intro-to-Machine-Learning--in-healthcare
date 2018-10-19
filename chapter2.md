@@ -1,6 +1,6 @@
 ---
-title: 'Exploratory Data Analysis'
-description: 'Exploratory Data Analysis'
+title: 'Applying the ML Model'
+description: 'Define and run the ML model'
 ---
 
 ## Machine Learning
