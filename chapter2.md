@@ -33,6 +33,25 @@ bc['diagnosis'] = bc['diagnosis'].map({'M':1, 'B':0})
 
 # Instantiate StandardScaler
 sc = StandardScaler()
+
+#Split the dataframe into an array 'X' with the input variables and an array 'y' with the outcome variable
+X = bc[['fractal_dimension_mean', 'smoothness_se']].values
+y = bc['diagnosis'].values
+
+#Scale features
+X = sc.fit_transform(X)
+
+# Splitting the dataset into the Training set and Test set
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = __, random_state = 0)
+
+#instantiation, random_state is set to a constant so that we obtain the same result when re-executing
+classifier = RandomForestClassifier(random_state=43)
+
+#perform the fit, using the training subset
+classifier = classifier.fit(X_train,y_train)
+
+#apply the classifier against the testset
+y_predict= classifier.predict(X_test)
 ```
 
 ***
