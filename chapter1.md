@@ -3,7 +3,7 @@ title: 'Loading and Exploring the Data'
 description: 'Loading Wisconsin Breast Cancer Data Set and performing Exploratory Data Analysis'
 ---
 
-## Review input data
+## Explore Data - Step 1
 
 ```yaml
 type: MultipleChoiceExercise

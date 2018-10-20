@@ -69,7 +69,7 @@ xp: 100
 `@instructions`
 In a first step the data will be normalized.
 
-Split data in a training and test set. You will do this using the `train_test_split` method from the `sklearn.model_selection` library. Typically, the ratio training vs test data is in the range of 0.7 to 0.8. In this specific exercise, use a ratio of 0.25 for the fraction of test data.
+Split data in a training and test set. You will do this using the `train_test_split` method from the `sklearn.model_selection` library. Typically, the ratio test vs training data is in the range of 0.2 to 0.3. In this specific exercise, use a ratio of 0.25 for the fraction of test data.
 
 `@hint`
 
