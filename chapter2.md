@@ -37,7 +37,7 @@ bc['diagnosis'] = bc['diagnosis'].map({'M':1, 'B':0})
 sc = StandardScaler()
 
 #Split the dataframe into an array 'X' with the input variables and an array 'y' with the outcome variable
-X = bc[['fractal_dimension_mean', 'smoothness_se']].values
+X = bc[['radius_mean','texture_mean','smoothness_mean','concavity_mean','symmetry_mean','fractaL_dimension_mean']].values
 y = bc['diagnosis'].values
 
 #Scale features
@@ -77,7 +77,7 @@ Split data in a training and test set. You will do this using the `train_test_sp
 `@sample_code`
 ```{python}
 #Split the dataframe into an array 'X' with the input variables and an array 'y' with the outcome variable
-X = bc[['fractal_dimension_mean', 'smoothness_se']].values
+X = bc[['radius_mean','texture_mean','smoothness_mean','concavity_mean','symmetry_mean','fractaL_dimension_mean']].values
 y = bc['diagnosis'].values
 
 #Scale features
