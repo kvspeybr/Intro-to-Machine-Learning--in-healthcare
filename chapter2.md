@@ -297,10 +297,73 @@ Ex().has_no_error()
 ## Insert exercise title here
 
 ```yaml
-type: VideoExercise
-key: fe950088a1
-xp: 50
+type: NormalExercise
+key: a26a669125
+xp: 100
 ```
 
-`@projector_key`
-2b3e3c5eaa81def32845ce67bae393b6
+
+
+`@instructions`
+
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{python}
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import f1_score,confusion_matrix
+from sklearn.metrics import accuracy_score
+from sklearn.metrics import roc_curve # ROC Curves
+from sklearn.metrics import roc_auc_score # Calculating AUC for ROC's!
+
+#read Wisconsin breast cancer data set
+bc = pd.read_csv('http://assets.datacamp.com/production/repositories/3810/datasets/7c19b7d9c1db98790fcf3efc234807a478e6a53e/data.csv')
+
+# Convert diagnosis to binary : M=1, B=0
+bc['diagnosis'] = bc['diagnosis'].map({'M':1, 'B':0})
+
+# Instantiate StandardScaler
+sc = StandardScaler()
+
+#Split the dataframe into an array 'X' with the input variables and an array 'y' with the outcome variable
+X = bc[['radius_mean','texture_mean','smoothness_mean','concavity_mean','symmetry_mean','fractal_dimension_mean']].values
+y = bc['diagnosis'].values
+
+#Scale features
+X = sc.fit_transform(X)
+
+# Splitting the dataset into the Training set and Test set
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, random_state = 0)
+
+#instantiation, random_state is set to a constant so that we obtain the same result when re-executing
+classifier = RandomForestClassifier(random_state=43)
+
+#perform the fit, using the training subset
+classifier = classifier.fit(X_train,y_train)
+
+#apply the classifier against the testset
+y_predict= classifier.predict(X_test)
+```
+
+`@sample_code`
+```{python}
+
+```
+
+`@solution`
+```{python}
+
+```
+
+`@sct`
+```{python}
+
+```
