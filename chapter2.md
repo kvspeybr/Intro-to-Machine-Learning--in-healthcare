@@ -205,6 +205,36 @@ Ex().has_chosen(1,[msg1, msg2, msg3, msg4])
 ***
 
 ```yaml
+type: MultipleChoiceExercise
+key: fe664a0a64
+```
+
+`@question`
+In this step, you will perform an evaluation of the model by calculating accuracy and showing the confusion matrix. Accuracy is only one metric that can be used to evaluate a model and it's the ratio of correctly classified 
+
+The confusion matrix is a grid with the actual outcomes on the X-axis and the predicted outcomes on the Y-axis.
+
+`@possible_answers`
+1. Accuracy is a good metric for model performance for balanced as well as unbalanced datasets
+2. Accuracy for this model on test set is 0.91 while it's 0.98 on the **training** set
+3. If we were to invert the definition of true / false for our outcomes i.e. true=benign and false=malignant we would get a higher accuracy with the same model
+4. There are as many false negatives as false positives in the **test** set
+
+`@hint`
+
+
+`@sct`
+```{python}
+msg1 = "Incorrect. Accuracy is not a good metric for unbalanced datasets"
+msg2 = "Incorrect."
+msg3 = "Incorrect. As the total number of correct predictions still would be the same, there would be no difference."
+msg4 = "Correct! Python is an extremely versatile language."
+Ex().has_chosen(1,[msg1, msg2, msg3, msg4])
+```
+
+***
+
+```yaml
 type: NormalExercise
 key: bc4eff4706
 ```
