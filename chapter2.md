@@ -291,3 +291,16 @@ plt.show()
 ```{python}
 Ex().has_no_error()
 ```
+
+---
+
+## Insert exercise title here
+
+```yaml
+type: VideoExercise
+key: fe950088a1
+xp: 50
+```
+
+`@projector_key`
+2b3e3c5eaa81def32845ce67bae393b6
