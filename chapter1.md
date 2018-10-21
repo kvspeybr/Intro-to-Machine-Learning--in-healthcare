@@ -239,4 +239,5 @@ plt.show()
 ```{python}
 Ex().check_object("cols").has_equal_value()
 Ex().check_function("seaborn.pairplot").check_args("hue").has_equal_value()
+success_msg("You just became master of the pairplot !")
 ```
