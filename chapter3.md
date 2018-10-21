@@ -131,7 +131,7 @@ Using the commands from the previous exercise, try to use those to select the co
 - Accuracy is a good metric for evaluating a ML model for balanced and imbalanced datasets
 - The accuracy would be higher if you set Benign tumors to 'True' and Malignant tumors to 'False' than in the opposite case
 - Accuracy on the test set is higher than on the training set
-- The number of False Positives is higher than the number of False Negatives
+- The number of False Positives is equal to the number of False Negatives
 
 `@hint`
 
