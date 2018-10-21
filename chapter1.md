@@ -11,13 +11,13 @@ key: a661985a47
 xp: 50
 ```
 
-The breast cancer data set is available, pre-loaded for you through the `pandas.read_csv()` function into a Python dataframe, named ''bc''. You can now explore this dataframe by executing the following commands:
+The breast cancer data set is available, pre-loaded for you through the `pandas.read_csv()` function into a Python dataframe, named `bc`. You can explore this dataframe by executing the following commands:
 
 - `bc.head()`: gives the top 5 rows of the data set
 
 - `bc.describe()` : descriptive statistics of the individual columns
 
-- `bc.iloc[x,:]`: full content of the record with index x. Note that the first record has index 0 (so x=0). `bc.iloc[x:y,m:n]` gives rows x to y for columns m to n.
+- `bc.iloc[x,:]`: full content of the record with index x. Note that the first record has index 0 (so x=0). `bc.iloc[x:y,m:n]` will select rows x to y for columns m to n.
 
 - `bc.columns`: gives the full list of column names
 
