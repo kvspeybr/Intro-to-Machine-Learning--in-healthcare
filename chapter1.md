@@ -217,7 +217,7 @@ plt.show()
 
 `@solution`
 ```{python}
-cols = ['concave points_worst', 'concavity_mean','perimeter_worst']
+cols = ['radius_mean', 'texture_mean', 'smoothness_mean']
 
 sns.pairplot(bc,
              x_vars = cols,
