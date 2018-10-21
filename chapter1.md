@@ -179,10 +179,10 @@ key: 78466eec7f
 xp: 100
 ```
 
-After loading the data, the Exploratory Data Analysis (EDA) is used to get an understanding of the data and possible indications of relationships. One of the possible tools to visualize different variables is to use a pairplot. in the exercise below you will create such a pairplot for 3 variables in function of the associated diagnosis
+To visualize the relationship between different variables , you can also use a pairplot. In the exercise below you will create such a pairplot for 3 variables in function of the associated diagnosis
 
 `@instructions`
-Create a pairplot for 3 variables from the breast_cancer data set: perimeter_worst , concavity_mean and area_se. In the template code below replace the variables (replace_me) in the cols-array by the respective variables that are to be displayed. Use 'diagnosis' as the variable to set the hue.
+Create a pairplot for 3 variables from the data set: `radius_mean`, `texture_mean`, `smoothness_mean`. Use `diagnosis` as the outcome variable to set the hue.
 
 `@hint`
 
@@ -208,7 +208,7 @@ cols = [__, __, __]
 sns.pairplot(bc,
              x_vars = cols,
              y_vars = cols,
-             hue = 'diagnosis', 
+             hue = __, 
              palette = ('Green','Red'), 
              markers=["o", "D"]) 
             
