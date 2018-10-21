@@ -17,21 +17,21 @@ The breast cancer data set is available, pre-loaded for you through the `pandas.
 
 - `bc.describe()` : descriptive statistics of the individual columns
 
-- `bc.iloc[x,:]`: fulll content of the record with index x. Note that the first record has index 0 (so x=0)
+- `bc.iloc[x,:]`: full content of the record with index x. Note that the first record has index 0 (so x=0). `bc.iloc[x:y,m:n]` gives rows x to y for columns m to n.
 
 - `bc.columns`: gives the full list of column names
 
-- `bc['column_name']`: gives all values for all subjects for the given column name. This syntaxis can be used in combination with the previous functions e.g. `bc['perimeter_mean'].describe()` gives the descriptive statistics only of this specific column
+- `bc['column_name']`: gives all values for all subjects for the given column name. This syntaxis can be used in combination with the previous functions e.g. `bc['perimeter_mean'].describe()` gives the descriptive statistics of this specific column
 
 
 Use the above commands to indicate which answer is **NOT** true
 
 `@possible_answers`
 - There are 569 records in the data set. 
-- The first three patients in the dataset have a diagnosis of 0 (benign)
-- The "compactness_mean" value for the first patient (index=0) is equal to 0.277600
-- The minimum value for "perimeter_mean" is 43.790000
-- The last column (variable) in the data set is "fractal_dimension_worst"
+- The first three patients in the dataset have a `diagnosis` of 0 (benign)
+- The `compactness_mean` value for the first patient (index=0) is equal to 0.277600
+- The minimum value for `perimeter_mean` is 43.790000
+- The last column (variable) in the data set is `fractal_dimension_worst`
 
 `@hint`
 
@@ -58,11 +58,11 @@ bc['diagnosis'] = bc['diagnosis'].map({'M':1, 'B':0})
 
 `@sct`
 ```{python}
-msg1 = "Wrong. Using the bc.describe() command you'll see there are 569 rows"
-msg2 = "Correct. The first three patients have a diagnosis of 1"
-msg3 = "Incorrect. Try using bc['compactness_mean']"
-msg4 = "Incorrect. Try with bc[perimeter_mean]"
-msg5 = "Incorrect. Trry with bc.columns"
+msg1 = "This statement is true. Using the bc.describe() command you'll see there are 569 rows for the first column (id)"
+msg2 = "This statement is false. The first three patients have a diagnosis of 1"
+msg3 = "This statement is true. Try using bc.iloc[0,:]"
+msg4 = "This statement is true. Try with bc[perimeter_mean].describe()"
+msg5 = "This statement is true. Try with bc.columns"
 Ex().has_chosen(2,[msg1, msg2, msg3, msg4, msg5])
 ```
 
