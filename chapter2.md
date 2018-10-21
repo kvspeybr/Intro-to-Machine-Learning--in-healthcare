@@ -157,7 +157,7 @@ Ex().check_correct(check_function('classifier.fit').multi(
     check_args(0).has_equal_value(),
     check_args(1).has_equal_value()),
                    check_function('classifier.predict').check_args(0).has_equal_value())
-success_msg("Congrats!")
+success_msg("Congratulations! You've succesfully ran the rand forest classifier algorithm on the test set after having trained it on on the training dataset")
 ```
 
 ***
