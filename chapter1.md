@@ -105,7 +105,9 @@ bc['diagnosis'] = bc['diagnosis'].map({'M':1, 'B':0})
 
 `@sct`
 ```{python}
-
+msg1 = "Congratulations. There is indeed no significant imbalance"
+msg2 = "Looks like you just guessed. Too bad as you guessed wrong !"
+Ex().has_chosen(1,[msg1, msg2])
 ```
 
 ---
