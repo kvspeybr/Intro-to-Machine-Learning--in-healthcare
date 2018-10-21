@@ -1,4 +1,4 @@
 title: Intro to Machine Learning  in Healthcare
-description: Apply base principles of Machine Learning using the Wisconsin Breast Cancer Dataset.
+description: Hands-on exploration of the base principles of Machine Learning using the Wisconsin Breast Cancer Dataset.
 programming_language: python
 from: python-base-prod:v1.0.2
