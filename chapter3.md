@@ -131,7 +131,7 @@ Using the commands from the previous exercise, try to use those to select the co
 - Accuracy is a good metric for evaluating a ML model for balanced and imbalanced datasets
 - The accuracy would be higher if you set Benign tumors to 'True' and Malignant tumors to 'False' than in the opposite case
 - Accuracy on the test set is higher than on the training set
-- The number of False Positives is equal to the number of False Negatives
+- The number of malignant tumors that is correctly predicted as malignant in the test set is 53
 
 `@hint`
 
@@ -182,7 +182,7 @@ classifier = classifier.fit(X_train,y_train)
 msg1 = "Incorrect. Accuracy is not a good metric for unbalanced datasets"
 msg2 = "Incorrect."
 msg3 = "Incorrect. As the total number of correct predictions still would be the same, there would be no difference."
-msg4 = "Correct!"
+msg4 = "Correct! "
 Ex().has_chosen(4,[msg1, msg2, msg3, msg4])
 ```
 
