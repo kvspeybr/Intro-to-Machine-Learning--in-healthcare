@@ -244,7 +244,7 @@ success_msg("You just became master of the pairplot !")
 
 ---
 
-## Insert exercise title here
+## Test
 
 ```yaml
 type: VideoExercise

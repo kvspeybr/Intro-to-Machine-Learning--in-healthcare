@@ -3,7 +3,7 @@ title: Insert title here
 key: 55bf6b1cb3af65cccb423efd8bea0304
 
 ---
-## A Quick Intro to Machine Learning
+## A 60 Minute Tutorial to Machine Learning
 
 ```yaml
 type: "TitleSlide"
