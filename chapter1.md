@@ -112,6 +112,65 @@ Ex().has_chosen(1,[msg1, msg2])
 
 ---
 
+## Identifying highly correlated features
+
+```yaml
+type: MultipleChoiceExercise
+key: 85c85a4f15
+xp: 50
+```
+
+Prior to building the model, highly correlated features need to be removed as they are redundant. In this step we'll visualize the correlations between all features. Assume that we've set the cutoff for highly correlated features at 0.9 or above (Pearson correlation coefficient). To keep all cells visible, the correlation heatmap has been reduced to 10  features. 
+
+The syntaxis for showing the correlation matrix as a heatmap is as follows:
+
+`sns.heatmap(bc_red.corr(), annot=True, linewidths=.5, fmt= '.1f',ax=ax)`
+
+and in a second step, execute the following command:
+
+`plt.xticks(rotation=90);plt.yticks(rotation=0);plt.show()`
+
+Indicate the statement below that is **NOT** true
+
+`@possible_answers`
+- There is no significant correlation between `texture_mean` and any other variable
+- `radius_mean` , `perimeter_mean` and `area_mean` can be replaced by one variable
+- `fractal_dimension_mean` and `texture_mean` have a significant (negative) correlation
+- If you are removing highly correlated features, only 6 variables would be withheld
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{python}
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+#read Wisconsin breast cancer data set
+bc = pd.read_csv('http://assets.datacamp.com/production/repositories/3810/datasets/7c19b7d9c1db98790fcf3efc234807a478e6a53e/data.csv')
+
+# Convert diagnosis to binary : M=1, B=0
+bc['diagnosis'] = bc['diagnosis'].map({'M':1, 'B':0})
+
+bc_red=bc[['radius_mean', 'texture_mean', 'perimeter_mean','area_mean', 'smoothness_mean', 'compactness_mean', 'concavity_mean','concave points_mean', 'symmetry_mean', 'fractal_dimension_mean']]
+
+
+f,ax = plt.subplots(figsize=(20, 20))
+```
+
+`@sct`
+```{python}
+msg1 = "This is a correct statement"
+msg2 = "This is a correct statement."
+msg3 = "This is indeed incorrect. The correlation coefficient is -0.1, so not significant"
+msg4 = "This is a correct statement"
+Ex().has_chosen(3,[msg1, msg2, msg3, msg4])
+```
+
+---
+
 ## Exploratory Data Analysis - Pairplot
 
 ```yaml
@@ -173,63 +232,4 @@ plt.show()
 `@sct`
 ```{python}
 Ex().has_equal_value()
-```
-
----
-
-## Identifying highly correlated features
-
-```yaml
-type: MultipleChoiceExercise
-key: 85c85a4f15
-xp: 50
-```
-
-Prior to building the model, highly correlated features need to be removed as they are redundant. In this step we'll visualize the correlations between all features. Assume that we've set the cutoff for highly correlated features at 0.9 or above (Pearson correlation coefficient). To keep everything visible, the correlation heatmap has been reduced to 13  features. 
-
-The syntaxis for showing the correlation matrix as a heatmap is as follows:
-
-`sns.heatmap(bc_red.corr(), annot=True, linewidths=.5, fmt= '.1f',ax=ax)`
-
-and in a second step, execute the following command:
-
-`plt.xticks(rotation=90);plt.yticks(rotation=0);plt.show()`
-
-Indicate the statement below that is **NOT** true
-
-`@possible_answers`
-- There is no significant correlation between `texture_mean` and any other variable
-- Radius_mean , perimeter_mean and area_mean can be replaced by one variable
-- `fractal_dimension_mean` and `texture_mean` have a significant (negative) correlation
-- If you are removing highly correlated features, only 5 variables would be withheld
-
-`@hint`
-
-
-`@pre_exercise_code`
-```{python}
-import pandas as pd
-import numpy as np
-import seaborn as sns
-import matplotlib.pyplot as plt
-
-#read Wisconsin breast cancer data set
-bc = pd.read_csv('http://assets.datacamp.com/production/repositories/3810/datasets/7c19b7d9c1db98790fcf3efc234807a478e6a53e/data.csv')
-
-# Convert diagnosis to binary : M=1, B=0
-bc['diagnosis'] = bc['diagnosis'].map({'M':1, 'B':0})
-
-bc_red=bc[['radius_mean', 'texture_mean', 'perimeter_mean','area_mean', 'smoothness_mean', 'compactness_mean', 'concavity_mean','concave points_mean', 'symmetry_mean', 'fractal_dimension_mean']]
-
-
-f,ax = plt.subplots(figsize=(20, 20))
-```
-
-`@sct`
-```{python}
-msg1 = "This is a correct statement"
-msg2 = "This is a correct statement."
-msg3 = "This is indeed incorrect. The correlation coefficient is -0.1, so not significant"
-msg4 = "This is a correct statement"
-Ex().has_chosen(3,[msg1, msg2, msg3, msg4])
 ```
