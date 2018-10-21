@@ -100,10 +100,12 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, rand
 `@sct`
 ```{python}
 Ex().has_no_error()
+Ex().check_object("y").has_equal_value
 Ex().check_function('sklearn.model_selection.train_test_split').multi(
     check_args(['options', 'test_size']).has_equal_value(),
     check_args(['options', 'random_state']).has_equal_value()
 )
+success_msg("Great job! X is the array with the features, y is the vector with the outcome variable. You've correctly split the test/train set")
 ```
 
 ***
