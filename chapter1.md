@@ -251,5 +251,3 @@ type: VideoExercise
 key: 68c0cf9150
 xp: 50
 ```
-
-
