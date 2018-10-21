@@ -80,7 +80,7 @@ An important step in exploring the data is to check whether there is class-imbal
 
 In the case of the breast cancer data set, there are only two possible classes: 0 or 1. You will perform a count of the number of occurrences of both classes and select the correct answer from the options below
 
-For calculating the number of occurrences per class, remember from the first exercise, that you could obtain all values for a given column by using `dataframe['columnname']`. To have the corresponding count per value for this column we need to extend that command by invoking the `.value_counts()` function. So the resulting command becomes: `breast_cancer['diagnosis'].value_counts()`
+For calculating the number of occurrences per class, remember from the first exercise, that you could obtain all values for a given column by using `dataframe['columnname']`. To have the corresponding count per value for this column we need to extend that command by invoking the `.value_counts()` function. So the resulting command becomes: `bc['diagnosis'].value_counts()`
 
 `@possible_answers`
 1. There are 212 samples with malignant tumors vs 357 benign - no significant class imbalance
