@@ -252,5 +252,4 @@ key: 68c0cf9150
 xp: 50
 ```
 
-`@projector_key`
-55bf6b1cb3af65cccb423efd8bea0304
+
