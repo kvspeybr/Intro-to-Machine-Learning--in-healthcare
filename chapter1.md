@@ -8,7 +8,7 @@ description: 'Loading Wisconsin Breast Cancer Data Set and performing Explorator
 ```yaml
 type: MultipleChoiceExercise
 key: a661985a47
-xp: 100
+xp: 50
 ```
 
 The breast cancer data set is available, pre-loaded for you through the `pandas.read_csv()` function into a Python dataframe, named `bc`. You can explore this dataframe by executing the following commands:
@@ -117,7 +117,7 @@ Ex().has_chosen(1,[msg1, msg2])
 ```yaml
 type: MultipleChoiceExercise
 key: 85c85a4f15
-xp: 100
+xp: 50
 ```
 
 Prior to building the model, highly correlated features need to be removed as they are redundant. In this step we'll visualize the correlations between all features. Assume that we've set the cutoff for highly correlated features at 0.9 or above (Pearson correlation coefficient). To keep all cells visible, the correlation heatmap has been reduced to 10  features. 
