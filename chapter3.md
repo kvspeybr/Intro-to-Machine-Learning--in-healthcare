@@ -78,7 +78,7 @@ classifier = classifier.fit(X_train,y_train)
 `@sample_code`
 ```{python}
 #apply the classifier against the testset
-y_predict= classifier.predict(X_test)
+y_predict= classifier.predict(__)
 
 #complete command to calculate accuracy on testset
 ac=accuracy_score(__,__)
@@ -108,7 +108,10 @@ plt.show()
 
 `@sct`
 ```{python}
-
+Ex().check_function("classifier_predict").check_args(0).has_equal_value()
+Ex().check_function("accuracy_score").multi(check_args(0).has_equal_value(),check_args(1).has_equal_value())
+Ex().check_function("confusion_matrix").multi(check_args(0).has_equal_value(),check_args(1).has_equal_value())
+success_msg("Cool! Looks like the confusion matrix has no secrets for you !")
 ```
 
 ---
