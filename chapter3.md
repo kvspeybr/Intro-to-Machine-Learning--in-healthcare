@@ -108,7 +108,7 @@ plt.show()
 
 `@sct`
 ```{python}
-Ex().check_function("classifier_predict").check_args(0).has_equal_value()
+Ex().check_function("classifier.predict").check_args(0).has_equal_value()
 Ex().check_function("accuracy_score").multi(check_args(0).has_equal_value(),check_args(1).has_equal_value())
 Ex().check_function("confusion_matrix").multi(check_args(0).has_equal_value(),check_args(1).has_equal_value())
 success_msg("Cool! Looks like the confusion matrix has no secrets for you !")
