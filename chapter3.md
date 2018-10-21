@@ -58,7 +58,7 @@ bc['diagnosis'] = bc['diagnosis'].map({'M':1, 'B':0})
 sc = StandardScaler()
 
 #Split the dataframe into an array 'X' with the input variables and an array 'y' with the outcome variable
-X = bc[['fractal_dimension_mean', 'smoothness_se']].values
+X = bc[['radius_mean','texture_mean','smoothness_mean','concavity_mean','symmetry_mean','fractal_dimension_mean']].values
 y = bc['diagnosis'].values
 
 #Scale features
@@ -98,6 +98,7 @@ y_predict= classifier.predict(X_test)
 
 #complete command to calculate accuracy on testset
 ac=accuracy_score(y_test,y_predict)
+print("accuracy score: ",ac)
 
 #complete command to calculate confusion matrix on training set
 cm=confusion_matrix(y_test,y_predict)
