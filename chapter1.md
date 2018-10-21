@@ -241,3 +241,16 @@ Ex().check_object("cols").has_equal_value()
 Ex().check_function("seaborn.pairplot").check_args("hue").has_equal_value()
 success_msg("You just became master of the pairplot !")
 ```
+
+---
+
+## Insert exercise title here
+
+```yaml
+type: VideoExercise
+key: 68c0cf9150
+xp: 50
+```
+
+`@projector_key`
+55bf6b1cb3af65cccb423efd8bea0304
