@@ -233,5 +233,4 @@ plt.show()
 ```{python}
 Ex().check_object("cols").has_equal_value()
 Ex().check_function('sns.pairplot').check_args('hue').has_equal_value()
-success_msg("You master the art of the Pairplot !")
 ```
