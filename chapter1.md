@@ -203,29 +203,35 @@ bc['diagnosis'] = bc['diagnosis'].map({'M':1, 'B':0})
 
 `@sample_code`
 ```{python}
+#Define feastures to be displayed - fill in
 cols = [__, __, __]
 
+#Create pairplot - fill in 'hue'
 sns.pairplot(bc,
              x_vars = cols,
              y_vars = cols,
              hue = __, 
              palette = ('Green','Red'), 
              markers=["o", "D"]) 
-            
+
+#Show pairplot
 plt.show()
 ```
 
 `@solution`
 ```{python}
+#Define feastures to be displayed - fill in
 cols = ['radius_mean', 'texture_mean', 'smoothness_mean']
 
+#Create pairplot - fill in 'hue'
 sns.pairplot(bc,
              x_vars = cols,
              y_vars = cols,
              hue = 'diagnosis', 
              palette = ('Green','Red'), 
              markers=["o", "D"]) 
-            
+
+#Show pairplot       
 plt.show()
 ```
 
