@@ -18,11 +18,11 @@ The confusion matrix is a grid with the actual outcomes on the X-axis and the pr
 `@instructions`
 - To calculate accuracy (accuracy = number of correct predictions / total number of predictions):
 
-`ac = accuracy_score(parm1,parm2)` whereby parm1 will be the array of actual outcome values (y_test) and parm2 will be the predicted outcomes (y_predict)
+`ac = accuracy_score(parm1,parm2)` whereby parm1 will be the array of actual outcome values (`y_test`) and parm2 will be the predicted outcomes (`y_predict`)
 
 - To calculate the confusion matrix:
 
-`cm=confusion_matrix(parm1,parm2)` whereby parm1 will be the array of actual outcome values (y_test) and parm2 will be the predicted outcomes (y_predict)
+`cm=confusion_matrix(parm1,parm2)` whereby parm1 will be the array of actual outcome values (`y_test`) and parm2 will be the predicted outcomes (`y_predict`)
 
 - To visualize the confusion matrix:
 
